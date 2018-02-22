@@ -160,17 +160,21 @@
       <Position>15</Position>
       <DataType>bool|0</DataType>
     </column>
-    <index id="42" parent="10" name="index_users_on_email">
+    <column id="42" parent="10" name="name">
+      <Position>16</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <index id="43" parent="10" name="index_users_on_email">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="43" parent="10" name="index_users_on_reset_password_token">
+    <index id="44" parent="10" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="44" parent="10">
+    <key id="45" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
