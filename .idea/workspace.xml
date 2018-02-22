@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de3fc6a-babf-4cff-a221-7730f58ee1a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0f037792-a6c1-41e5-b33d-3faed1a5e845.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0f037792-a6c1-41e5-b33d-3faed1a5e845.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/woodendoor.iml" afterPath="$PROJECT_DIR$/.idea/woodendoor.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -503,7 +496,7 @@
       <workItem from="1519247720789" duration="5745000" />
       <workItem from="1519253488254" duration="1326000" />
       <workItem from="1519254933849" duration="7300000" />
-      <workItem from="1519314961377" duration="2245000" />
+      <workItem from="1519314961377" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1518840459618</created>
@@ -528,7 +521,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30661000" />
+    <option name="totallyTimeSpent" value="30751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
