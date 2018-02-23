@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @jobs = Job.where("company_id = ?", params[:id])
   end
 
   # GET /companies/new

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :companies
+  resources :companies do
+    resources :jobs
+  end
   root to: 'pages#index'
   devise_for :users, :controllers => {:registrations => "registrations"}
   devise_scope :user do

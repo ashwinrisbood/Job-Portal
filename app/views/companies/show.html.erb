@@ -44,6 +44,20 @@
   <strong>Synopsis:</strong>
   <%= @company.synopsis %>
 </p>
-
+<%= link_to 'jobs', company_job_path(@company) %> |
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
+</br>
+</br>
+
+
+<h2> JOBS </h2>
+<%= form_with(model: [@company, @company.jobs.build]) do |f| %>
+  <%= f.text_field :description, placeholder: "description", class: 'form-control'%>
+  <%= f.text_field :type, id: :job_type, placeholder: "type", class: 'form-control' %>
+  <%= f.text_field :responsibilities, id: :job_responsibilities, placeholder: "responsibilities" ,class: 'form-control' %>
+  <%= f.text_field :requirements, id: :job_requirements , placeholder: "requirements", class: 'form-control'%>
+  <%= f.submit "submit" %>
+<%end%>
+
+
