@@ -1,0 +1,48 @@
+<div class="container" id="company-form">
+  <div class="row">
+    <h1>Create a Portal for you Company</h1>
+    <h3>Create and accomplish goals together</h3>
+
+    <div class="col-sm-offset-4 col-sm-4">
+      <h3>Sign up <small>it's free!</small></h3>
+
+      <%= bootstrap_form_for(@company, layout: :horizontal) do |form| %>
+        <div class="field">
+          <%= form.text_field :name, id: :company_name, class: 'form-control', placeholder: 'Company name'%>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :website, id: :company_website,class: 'form-control', placeholder: 'Website' %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :Hq, id: :company_Hq, class: 'form-control', placeholder: 'Headquaters'%>
+        </div>
+
+        <div class="field">
+          <%= form.number_field :size, id: :company_size , class: 'form-control', placeholder: 'Size'%>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :Founded, id: :company_Founded, class: 'form-control' , placeholder: 'Founded'%>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :industry, id: :company_industry, class: 'form-control', placeholder: 'Industry' %>
+        </div>
+
+        <div class="field">
+          <%= form.number_field :revenue, id: :company_revenue, class: 'form-control', placeholder: 'revenue' %>
+        </div>
+
+        <div class="field">
+          <%= form.text_area :synopsis, id: :company_synopsis, class: 'form-control', placeholder: 'Synopsis' %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
