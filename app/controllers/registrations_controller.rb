@@ -16,8 +16,6 @@ class RegistrationsController < Devise::RegistrationsController
                                   :password_confirmation,
                                   :current_password)
   end
-<<<<<<< HEAD
 end
-=======
 end
->>>>>>> arisboo
+
