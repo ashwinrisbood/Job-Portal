@@ -5,9 +5,7 @@ class CreateJobs < ActiveRecord::Migration[5.1]
       t.string :type
       t.string :responsibilities
       t.string :requirements
-
       t.timestamps
-
       add_foreign_key :jobs, :companies
     end
   end
