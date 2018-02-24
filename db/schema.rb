@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20180223185816) do
     t.string "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "company_id"
   end
 
 # Could not dump table "users" because of following StandardError
