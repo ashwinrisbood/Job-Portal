@@ -10,7 +10,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
-    #@jobs = Job.where("company_id = ?", params[:id])
+    @jobs = Job.where("company_id = ?", params[:id])
   end
 
   # GET /jobs/new
@@ -25,7 +25,7 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @company = company.find(params[:company_id])
+    @company = Company.find(params[:company_id])
     @job = @company.jobs.build(job_params)
       if @job.save
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
