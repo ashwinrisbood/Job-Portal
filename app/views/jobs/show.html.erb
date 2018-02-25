@@ -1,13 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="container">
+    <div class="row">
 
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
+      <h2> <%= @job.position %> position at <%= @job.company.name %> </h2>
+
+      <h3>Job ID:
+        <%= @job.id%>
+      </h3>
+
+
+      <div class="col-sm-offset-4 col-sm-4">
+<p style="overflow: auto; width: 100%; height: auto">
+  <strong>Job description:</strong>
+  <%= @job.job_description %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @job.type %>
+  <strong>Employment type:</strong>
+  <%= @job.employment_type %>
 </p>
 
 <p>
@@ -20,5 +30,15 @@
   <%= @job.requirements %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<p>
+  <strong>Company:</strong>
+  <%= @job.company.name %>
+</p>
+        <% if current_user.isRecruiter=='True' and current_user.companyname == @job.company.name%>
+<%= link_to 'Edit', edit_job_path(@job), class: 'btn btn-primary btn-lg' %>
+        <% end %>
+<%= link_to 'Back', jobs_path, class: 'btn btn-warning btn-lg'  %>
+    </div>
+  </div>
+</div>
+</div>

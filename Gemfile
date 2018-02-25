@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-gem 'pg', '0.18.1', group: :production
+gem 'pg', '1.0.0', group: :production
 gem 'rails_12factor', group: :production
 # Install devise
 gem 'devise'

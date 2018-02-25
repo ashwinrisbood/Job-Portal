@@ -13,20 +13,31 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <%= render 'layouts/navigation' %>
   <div class="container">
     <div class="container">
+      <% if notice.present? %>
+        <div class="alert alert-info div-notice">
+          <a href="#" class="alert-link"><%= notice %></a>
+        </div>
+      <% end %>
+      <% if alert.present? %>
+        <div class="alert alert-warning div-alert">
+          <a href="#" class="alert-link"><%= alert %></a>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
   </div>
-
-  <footer class="footer text-faded text-center py-5">
   <div class="container">
-  <p class="m-0 small">Copyright &copy; WoodenDoor 2018</p>
-    <p class="m-0 small">CSC 517 - OODD - Program 2</p>
-  </div>
+  <footer class="footer text-center navbar-fixed-bottom navbar-text">
+      <p class="small">Copyright &copy; WoodenDoor 2018</p>
+      <p class="small">CSC 517 - OODD - Program 2</p>
   </footer>
+  </div>
   </body>
+  <script type="text/javascript">
+      $(".alert-info" ).fadeOut(5000);
+      $(".alert-warning" ).fadeOut(5000);
+  </script>
 </html>

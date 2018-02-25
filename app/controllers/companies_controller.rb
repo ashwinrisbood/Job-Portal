@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /companies
   # GET /companies.json
@@ -10,7 +11,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @jobs = Job.where("company_id = ?", params[:id])
+    @company = Company.find(params[:id])
   end
 
   # GET /companies/new
@@ -63,13 +64,14 @@ class CompaniesController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
-    def set_company
-      @company = Company.find(params[:company_id])
-    end
+  def set_company
+    @company = Company.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def company_params
-      params.require(:company).permit(:id, :name, :website, :Hq, :size, :Founded, :industry, :revenue, :synopsis)
-    end
+  def company_params
+    params.require(:company).permit(:id, :name, :website, :Hq, :size, :Founded, :industry, :revenue, :synopsis)
+  end
 end

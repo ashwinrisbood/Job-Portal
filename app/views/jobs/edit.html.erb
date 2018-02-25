@@ -1,6 +1,58 @@
 <h1>Editing Job</h1>
+<div class="container" id="job-form">
+  <div class="row">
+    <h4 class="text-center">Please edit the given details</h4>
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= bootstrap_form_for(@job) do |form| %>
+        <% if @job.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
 
-<%= render 'form', job: @job %>
+            <ul>
+              <% @job.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
+        <div class="field">
+          <%= form.label :position %>
+          <%= form.text_field :position, id: :job_position %>
+        </div>
+
+        <div class="field">
+          <%= form.label :job_description %>
+          <%= form.text_field :job_description, id: :job_job_description %>
+        </div>
+
+        <div class="field">
+          <%= form.label :employment_type %>
+          <%= form.text_field :employment_type, id: :job_employment_type %>
+        </div>
+
+        <div class="field">
+          <%= form.label :responsibilities %>
+          <%= form.text_field :responsibilities, id: :job_responsibilities %>
+        </div>
+
+        <div class="field">
+          <%= form.label :requirements %>
+          <%= form.text_field :requirements, id: :job_requirements %>
+        </div>
+
+        <div class="field">
+          <%= form.label :company_id %>
+          <%= form.text_field :company_id, id: :job_company_id %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit 'Create Job', class: 'btn btn-primary btn-lg btn-block' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="container">
+<%= link_to 'Back to Jobs', jobs_path, class: 'btn btn-warning btn-lg' %>
+</div>

@@ -15,3 +15,4 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+//= require flat-ui.js

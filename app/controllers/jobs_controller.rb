@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /jobs
   # GET /jobs.json
@@ -10,7 +11,6 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
-    @jobs = Job.where("company_id = ?", params[:id])
   end
 
   # GET /jobs/new
@@ -25,8 +25,9 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @company = Company.find(params[:company_id])
-    @job = @company.jobs.build(job_params)
+    @job = Job.new(job_params)
+
+    respond_to do |format|
       if @job.save
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
         format.json { render :show, status: :created, location: @job }
@@ -35,6 +36,7 @@ class JobsController < ApplicationController
         format.json { render json: @job.errors, status: :unprocessable_entity }
       end
     end
+  end
 
   # PATCH/PUT /jobs/1
   # PATCH/PUT /jobs/1.json
@@ -63,11 +65,11 @@ class JobsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job
-      @jobs = (Job.where("company_id = ?", params[:id]))
+      @job = Job.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:description, :type, :responsibilities, :requirements)
+      params.require(:job).permit(:position ,:job_description, :employment_type, :responsibilities, :requirements, :company_id)
     end
 end

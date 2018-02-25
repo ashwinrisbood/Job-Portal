@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  description: 
-  type: 
-  responsibilities: 
+  job_description: MyString
+  employment_type: MyString
+  responsibilities: MyString
   requirements: MyString
+  company: one
 
 two:
-  description: 
-  type: 
-  responsibilities: 
+  job_description: MyString
+  employment_type: MyString
+  responsibilities: MyString
   requirements: MyString
+  company: two
