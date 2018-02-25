@@ -38,7 +38,7 @@
   <strong>Synopsis:</strong>
   <%= @company.synopsis %>
 </p>
-    <% if current_user.isAdmin == 'True' or current_user.isAdmin?%>
+    <% if current_user.isAdmin == 'True' or current_user.isAdmin==true%>
 <%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-primary btn-lg' %>
     <% end %>
 <%= link_to 'Back', companies_path, class: 'btn btn-warning btn-lg' %>
