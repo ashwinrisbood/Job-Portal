@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
+//= require flat-ui.js
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require flat-ui.js
 //= require_tree .
