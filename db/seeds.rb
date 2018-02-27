@@ -45,7 +45,8 @@ User.create!([{name: 'Admin',
                   password_confirmation: 'google',
                   isAdmin: false,
                   isRecruiter: true,
-                  companyname: 'Google'
+                  companyname: 'Google',
+                  company_id: 1
               },
               {
                   name: 'Facebook recruiter',
@@ -54,7 +55,18 @@ User.create!([{name: 'Admin',
                   password_confirmation: 'facebook',
                   isAdmin: false,
                   isRecruiter: true,
-                  companyname: 'Facebook'
+                  companyname: 'Facebook',
+                  company_id: 2
+              },
+              {
+                  name: 'Amazon recruiter',
+                  email: 'amazon_recruiter@amazon.com',
+                  password: 'amazon',
+                  password_confirmation: 'amazon',
+                  isAdmin: false,
+                  isRecruiter: true,
+                  companyname: 'Amazon',
+                  company_id: 3
               }])
 p "Created #{User.count} Users"
 
@@ -76,6 +88,15 @@ Company.create!([{name: 'Google',
                   industry: 'Software',
                   revenue: '10000000',
                   synopsis: 'This is Facebook'
+                 },
+                 {name: 'Amazon',
+                  website: 'www.amazon.com',
+                  Hq: 'Menlo Park',
+                  size: '7000',
+                  Founded: '2009',
+                  industry: 'Software',
+                  revenue: '10000000',
+                  synopsis: 'This is Amazon'
                  }])
 
 p "Created #{Company.count} Companies"

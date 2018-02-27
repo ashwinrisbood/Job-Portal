@@ -262,6 +262,7 @@
     <column id="66" parent="12" name="isAdmin">
       <Position>14</Position>
       <DataType>bool|0</DataType>
+      <DefaultExpression>&apos;f&apos;</DefaultExpression>
     </column>
     <column id="67" parent="12" name="isRecruiter">
       <Position>15</Position>
@@ -271,17 +272,25 @@
       <Position>16</Position>
       <DataType>varchar|0</DataType>
     </column>
-    <index id="69" parent="12" name="index_users_on_email">
+    <column id="69" parent="12" name="company_id">
+      <Position>17</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="70" parent="12" name="companyname">
+      <Position>18</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <index id="71" parent="12" name="index_users_on_email">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="70" parent="12" name="index_users_on_reset_password_token">
+    <index id="72" parent="12" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="71" parent="12">
+    <key id="73" parent="12">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

@@ -2,7 +2,7 @@
 <div class="container">
   <div class="container container-fluid">
     <div class="col-sm-offset-9 col-sm-3 right">
-      <% if current_user.isRecruiter=='True' or current_user.isRecruiter==true%>
+      <% if current_user.isRecruiter.to_s=='True' or current_user.isRecruiter.to_s=='t' or current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
       <%= link_to 'New Job', new_job_path, class: 'btn btn-info btn-lg btn-block' %>
       <% end %>
     </div>
@@ -34,9 +34,13 @@
         <td><%= job.requirements %></td>
         <td><%= job.company.name %></td>
         <td><%= link_to 'Show', job , class: 'btn btn-primary btn-lg btn-block' %></td>
-        <% if (current_user.isRecruiter=='True' or current_user.isRecruiter==true) and current_user.companyname == job.company.name%>
+        <% if ((current_user.isRecruiter.to_s=='True' or current_user.isRecruiter.to_s=='t') and current_user.companyname == job.company.name)%>
         <td><%= link_to 'Edit', edit_job_path(job), class: 'btn btn-warning btn-lg btn-block' %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg' %></td>
+        <% end %>
+        <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
+          <td><%= link_to 'Edit', edit_job_path(job), class: 'btn btn-warning btn-lg btn-block' %></td>
+          <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg btn-block' %></td>
         <% end %>
       </tr>
     <% end %>

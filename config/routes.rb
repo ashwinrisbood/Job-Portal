@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '/users', to: 'users#index', via: 'get'
   resources :jobs
   resources :companies do
     end
@@ -13,5 +14,9 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'users/sign_in', to: 'devise/sessions#new'
   end
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy'
+  end
+  match '/users/:id', to: 'users#destroy', via: 'delete', as: :user
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
