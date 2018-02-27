@@ -206,7 +206,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="302" />
     <option name="y" value="-19" />
     <option name="width" value="1506" />
@@ -497,7 +497,7 @@
       <workItem from="1519424471486" duration="104000" />
       <workItem from="1519442423330" duration="1174000" />
       <workItem from="1519445806447" duration="1003000" />
-      <workItem from="1519765480774" duration="321000" />
+      <workItem from="1519765480774" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1518840459618</created>
@@ -522,10 +522,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56315000" />
+    <option name="totallyTimeSpent" value="56687000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17185822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20891514" sideWeight="0.4941349" order="1" side_tool="false" content_ui="combo" />
