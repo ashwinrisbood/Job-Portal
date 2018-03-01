@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180225094449) do
+ActiveRecord::Schema.define(version: 20180301215340) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,24 @@ ActiveRecord::Schema.define(version: 20180225094449) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_jobs_on_company_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "name"
+    t.integer "no_of_workex_years"
+    t.string "current_company"
+    t.string "attachment"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.string "name"
+    t.string "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 # Could not dump table "users" because of following StandardError

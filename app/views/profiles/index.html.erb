@@ -1,0 +1,31 @@
+<h1>Your Profile</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<br />
+<%= link_to "Add your Profile", new_profile_path, class: "btn btn-primary" %>
+<br />
+<br />
+<div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4">
+        <p>
+          <strong> Name: </strong>
+          <%= Profile.find_by_user_id(current_user.id).name %>
+        </p>
+        <p>
+          <strong>No of Years of Work experience:</strong>
+          <%= Profile.find_by_user_id(current_user.id).no_of_workex_years %>
+        </p>
+        <p>
+          <strong>Download Resume:</strong>
+          <%= link_to "Download Resume", Profile.find_by_user_id(current_user.id).attachment_url %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

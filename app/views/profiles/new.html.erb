@@ -1,0 +1,36 @@
+<div class="container" id="profile-form">
+  <div class="row">
+    <h4 class="text-center">Please add profile details</h4>
+    <h2> Name: <%= current_user.name %> </h2>
+
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= bootstrap_form_for(@profile) do |form| %>
+
+        <div class="field">
+          <label for="company_Hq">Name</label>
+          <%= form.text_field :name, id: :profile_name, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">No of Years on Work Experience</label>
+          <%= form.text_field :no_of_workex_years, id: :profile_noofworkexyears, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Current Company</label>
+          <%= form.text_field :current_company, id: :profile_current_company, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Please Upload Your resume</label>
+          <%= form.file_field :attachment %>
+        </div>
+        <!--<div class="field">-->
+          <!--<%= form.label :user_id %>-->
+          <!--<%= form.text_field :user_id, id: :profile_user_id %>-->
+        <!--</div>-->
+        <%= form.submit 'Save Profile', class: 'btn btn-primary btn-lg btn-block'%>
+      <% end %>
+    </div>
+  </div>
+</div>

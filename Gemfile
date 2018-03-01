@@ -41,6 +41,8 @@ gem 'redis', '~> 4.0'
 #
 gem 'bcrypt', '~> 3.1.7',:require => 'bcrypt'
 
+gem 'attach'
+gem 'carrierwave'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
