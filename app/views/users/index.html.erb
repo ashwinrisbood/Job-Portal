@@ -1,0 +1,45 @@
+<h1>Users</h1>
+<div class="container">
+  <div class="container container-fluid">
+    <div class="col-sm-offset-9 col-sm-3 right">
+      <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s=='t'%>
+        <%= link_to 'New User', new_user_registration_path, class: 'btn btn-info btn-lg btn-block' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Created</th>
+    <th>Recruiter</th>
+    <th>Company Name</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |u| %>
+  <% if not (u.isAdmin.to_s == 'True' or u.isAdmin.to_s=='t') %>
+    <div id="display_users" class="list-group-item-text">
+      <tr>
+        <td><%= u.name %></td>
+        <td><%= u.email %></td>
+        <td><%= u.created_at %></td>
+        <% if u.isRecruiter.to_s=='t' or u.isRecruiter.to_s=='True' or u.isRecruiter.to_s=='true'%>
+        <td><span class="fui-check" style="margin-left: 30%"></span></td>
+        <td><%= Company.find(u.company_id.to_f).name %></td>
+          <% else %>
+          <td><span class="fui-cross" style="margin-left: 30%"></span></td>
+          <td><%= u.companyname %></td>
+          <% end %>
+        <td><%= link_to 'Delete', u , controller: 'users', :method => :delete, :confirm => "You sure?",class: 'btn btn-danger btn-lg btn-block'%></td>
+      </tr>
+    </div>
+  <% end %>
+  <% end %>
+  </tbody>
+</table>

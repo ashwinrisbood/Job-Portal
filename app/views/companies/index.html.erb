@@ -1,11 +1,17 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Companies</h1>
+<div class="container">
+  <div class="container container-fluid">
+    <div class="col-sm-offset-9 col-sm-3 right">
+      <% if current_user.isAdmin == 'True' or current_user.isAdmin.to_s=='t'%>
+      <%= link_to 'New Company', new_company_path, class: 'btn btn-info btn-lg btn-block' %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <table class="table">
   <thead>
     <tr>
-     <!-- <th>Id</th>
       <th>Name</th>
       <th>Website</th>
       <th>Hq</th>
@@ -14,7 +20,7 @@
       <th>Industry</th>
       <th>Revenue</th>
       <th>Synopsis</th>
-      <th colspan="3"></th>-->
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -30,15 +36,14 @@
         <td><%= company.industry %></td>
         <td><%= company.revenue %></td>
         <td><%= company.synopsis %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'delete', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', company , class: 'btn btn-primary btn-lg btn-block'%></td>
+        <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
+        <td><%= link_to 'Edit', edit_company_path(company), class: 'btn btn-warning btn-lg btn-block' %></td>
+        <td><%= link_to 'Delete', company, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg btn-block' %></td>
+        <% end %>
       </tr>
     </div>
     <% end %>
   </tbody>
-
 </table>
 <br>
-
-<%= link_to 'New Company', new_company_path %>

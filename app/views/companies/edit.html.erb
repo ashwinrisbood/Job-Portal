@@ -1,6 +1,56 @@
-<h1>Editing Company</h1>
+<h3>Editing Company</h3>
+<div class="container" id="company-form">
+  <div class="row">
+    <h4 class="text-center">Please edit the given details</h4>
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= bootstrap_form_for(@company) do |form| %>
 
-<%= render 'form', company: @company %>
+        <div class="field">
+          <label for="company_Hq">Company Name</label>
+          <%= form.text_field :name, id: :company_name, class: 'form-control'%>
+        </div>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+        <div class="field">
+          <label for="company_Hq">Website</label>
+          <%= form.text_field :website, id: :company_website,class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Headquarters</label>
+          <%= form.text_field :Hq, id: :company_Hq, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Size</label>
+          <%= form.number_field :size, id: :company_size , class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Year Founded</label>
+          <%= form.text_field :Founded, id: :company_Founded, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Industry</label>
+          <%= form.text_field :industry, id: :company_industry, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Revenue</label>
+          <%= form.number_field :revenue, id: :company_revenue, class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <label for="company_Hq">Synopsis</label>
+          <%= form.text_area :synopsis, id: :company_synopsis, class: 'form-control'%>
+        </div>
+        <%= form.submit 'Create Company', class: 'btn btn-primary btn-lg btn-block'%>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <%= link_to 'Back to Companies', companies_path, class: 'btn btn-warning btn-lg' %>
+</div>

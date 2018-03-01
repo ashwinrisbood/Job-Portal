@@ -1,24 +1,19 @@
-# README
+Admin Account: admin@woodendoor.com
+Password: adminpassword
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Google_recruiter: google_recruiter@google.com
+Password: google
 
-Things you may want to cover:
+Facebook_recruiter: facebook_recruiter@facebook.com
+Password: facebook
 
-* Ruby version
+Seekers:
 
-* System dependencies
+1. Account: spoudwa@ncsu.edu
+   Password: spoudwa
+  
+2. Account: arisboo@ncsu.edu
+      Password: arisboo
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3. Account: psinha@ncsu.edu
+      Password: psinha

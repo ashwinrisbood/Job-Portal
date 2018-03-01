@@ -10,19 +10,19 @@
     <%= f.email_field :email,
                       autofocus: true,
                       class: 'form-control',
-                      placeholder: 'email' %>
+                      placeholder: 'Email' %>
 
     <%= f.password_field  :password,
                           autocomplete: "off",
-                          class: 'form-control',
-                          placeholder: 'password' %>
+                          class: 'form-control login-field login-field-icon fui-lock',
+                          placeholder: 'Password' %>
 
 
     <% if devise_mapping.rememberable? -%>
       <%= f.check_box :remember_me %>
     <% end -%>
 
-    <%= f.submit "Log in", class: 'form-control login-button' %>
+    <%= f.submit "Log in", class: 'btn btn-primary btn-lg btn-block' %>
   <% end %>
     </div>
   </div>

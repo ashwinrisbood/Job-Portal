@@ -1,28 +1,33 @@
 <div class="container" id="sign-up-form">
   <div class="row">
-    <h1>Get in touch with like-minded people</h1>
-    <h3>Create, study, accomplish goals together</h3>
+    <h1>Get your account in WoodenDoor</h1>
+    <h3>Find your dream Job here!</h3>
 
     <div class="col-sm-offset-4 col-sm-4">
-      <h3>Sign up <small>it's free!</small></h3>
+      <h3>Sign up <h6>it's free!</h6></h3>
 
       <%= bootstrap_form_for(resource,
                          :as => resource_name,
                          :url => registration_path(resource_name)) do |f| %>
 
     <%= f.text_field :name,
-                     placeholder: 'username (will be shown publicly)',
+                     placeholder: 'Username (will be shown publicly)',
                      class: 'form-control' %>
-    <%= f.text_field :email,
-                     placeholder: 'email',
+        <%= f.label :isRecruiter?, placeholder: "Is this a Recruiter Account?" %>
+        <%= f.check_box :isRecruiter, {},true, false %>
+        <div id="company_details" style="display:none;">
+          <%= f.select :company_id, options_for_select(Company.all.map{ |c| [c.name, c.id]}), selected_key: [f.object.companyname, f.object.company_id]%>
+        </div>
+        <%= f.text_field :email,
+                     placeholder: 'Email',
                      class: 'form-control' %>
     <%= f.password_field :password,
-                         placeholder: 'password',
-                         class: 'form-control' %>
+                         placeholder: 'Password',
+                         class: 'form-control login-field-icon fui-lock' %>
     <%= f.password_field :password_confirmation,
-                         placeholder: 'password confirmation',
-                         class: 'form-control' %>
-    <%= f.submit 'Sign up', class: 'btn sign-up-button' %>
+                         placeholder: 'Password Confirmation',
+                         class: 'form-control login-field login-field-icon fui-lock' %>
+    <%= f.submit 'Sign up', class: 'btn btn-primary btn-lg btn-block' %>
   <% end %>
     </div>
   </div>
