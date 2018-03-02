@@ -1,5 +1,6 @@
 class Job < ApplicationRecord
   belongs_to :company
+  has_many :applications, dependent: :destroy
   def self.search(params)
     results = Job.all
     results = results.where(company_id: params[:company_id]) if params[:company_id].present?

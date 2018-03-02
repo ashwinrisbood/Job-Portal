@@ -1,0 +1,72 @@
+<div class="container" id="company-form">
+  <div class="row">
+    <h4 class="text-center">Please add the given details</h4>
+
+    <div class="col-sm-offset-4 col-sm-4">
+
+      <h2> JOb ID: <%= @job.id %> </h2>
+<%= bootstrap_form_for(@application) do |form| %>
+  <% if application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :application_name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_company %>
+    <%= form.text_field :current_company, id: :application_current_company, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedin %>
+    <%= form.text_field :linkedin, id: :application_linkedin, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add_info %>
+    <%= form.text_field :add_info, id: :application_add_info, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :application_gender, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race %>
+    <%= form.text_field :race, id: :application_race, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :disability %>
+    <%= form.text_field :disability, id: :application_disability, class: 'form-control' %>
+  </div>
+
+  <!--<div class="field">-->
+    <!--<%= form.label :user_id %>-->
+    <!--<%= form.text_field :user_id, id: :application_user_id, class: 'form-control' %>-->
+  <!--</div>-->
+
+  <div class="field">
+    <%= form.label :job_id %>
+    <%= form.hidden_field :job_id, value: params[:job_id]%>
+        </div>
+
+  <div class="actions">
+    <%= form.submit 'Submit Applications', class: 'btn btn-primary btn-lg btn-block' %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>

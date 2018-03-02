@@ -1,6 +1,7 @@
 <li><%= link_to 'Home', root_path, class: 'pc-menu'%></li>
 <li><%= link_to 'Companies', companies_path , class: 'pc-menu'%></li>
 <li><%= link_to 'Jobs', jobs_path , class: 'pc-menu'%></li>
+<li><%= link_to 'Your Applications', applications_path , class: 'pc-menu'%></li>
 <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s=='t'%>
   <li><%= link_to 'Users', users_path, class: 'pc-menu'%></li>
 <% end %>
@@ -20,6 +21,7 @@
   <%= link_to 'Home', root_path %>
   <%= link_to 'Companies', companies_path %>
   <%= link_to 'Jobs', companies_path %>
+<%= link_to 'Your Applications', applications_path%>
   <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
     <%= link_to 'Users', users_path%>
   <% end %>

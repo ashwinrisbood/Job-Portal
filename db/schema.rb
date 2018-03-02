@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301215340) do
+ActiveRecord::Schema.define(version: 20180302192248) do
+
+  create_table "applications", force: :cascade do |t|
+    t.string "name"
+    t.string "current_company"
+    t.string "linkedin"
+    t.string "add_info"
+    t.string "gender"
+    t.string "race"
+    t.string "disability"
+    t.integer "user_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_applications_on_job_id"
+    t.index ["user_id"], name: "index_applications_on_user_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "name"

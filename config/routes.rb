@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :applications
   match '/users', to: 'users#index', via: 'get'
   resources :jobs
   resources :companies do
