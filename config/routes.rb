@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'profiles/index'
-
-  get 'profiles/new'
-
-  get 'profiles/create'
-
-  get 'profiles/destroy'
-
   match '/users', to: 'users#index', via: 'get'
   resources :jobs
   resources :companies do
@@ -27,7 +19,7 @@ Rails.application.routes.draw do
   end
   match '/users/:id', to: 'users#destroy', via: 'delete', as: :user
 
-  resources :profiles, only: [:index, :new, :create, :destroy] do
+  resources :profiles, only: [:index, :new, :create, :destroy, :edit, :update] do
   root "profiles#index"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -13,8 +13,8 @@
     <%= f.text_field :name,
                      placeholder: 'Username (will be shown publicly)',
                      class: 'form-control' %>
-        <%= f.label :isRecruiter?, placeholder: "Is this a Recruiter Account?" %>
-        <%= f.check_box :isRecruiter, {},true, false %>
+        <strong>Is this a Recruiter Account?</strong>
+        <%= f.check_box :isRecruiter?, {},true, false %>
         <div id="company_details" style="display:none;">
           <%= f.select :company_id, options_for_select(Company.all.map{ |c| [c.name, c.id]}), selected_key: [f.object.companyname, f.object.company_id]%>
         </div>

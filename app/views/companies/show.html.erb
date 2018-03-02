@@ -39,7 +39,7 @@
   <%= @company.synopsis %>
 </p>
     <% if current_user.isAdmin == 'True' or current_user.isAdmin.to_s=='t'%>
-<%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-primary btn-lg' %>
     <% end %>
 <%= link_to 'Back', companies_path, class: 'btn btn-warning btn-lg' %>
 </div>
