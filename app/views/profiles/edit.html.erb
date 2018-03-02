@@ -5,23 +5,27 @@
     <div class="col-sm-offset-4 col-sm-4">
       <%= bootstrap_form_for(Profile.find_by_user_id(current_user.id)) do |form| %>
 
+        <!--<div class="field">-->
+          <!--<label for="profile_name">Name</label>-->
+          <!--<%= form.text_field :name, id: :profile_name, class: 'form-control'%>-->
+        <!--</div>-->
         <div class="field">
-          <label for="company_Hq">Name</label>
-          <%= form.text_field :name, id: :profile_name, class: 'form-control'%>
+          <%= form.label :name %><br />
+          <%= form.text_field :name, autofocus: true, autocomplete: Profile.find_by_user_id(current_user.id).name.to_s, disabled: "disabled", class: 'form-control' %>
         </div>
 
         <div class="field">
-          <label for="company_Hq">No of Years on Work Experience</label>
+          <label for="profile_noofworkexyears">No of Years on Work Experience</label>
           <%= form.text_field :no_of_workex_years, id: :profile_noofworkexyears, class: 'form-control'%>
         </div>
 
         <div class="field">
-          <label for="company_Hq">Current Company</label>
+          <label for="profile_current_company">Current Company</label>
           <%= form.text_field :current_company, id: :profile_current_company, class: 'form-control'%>
         </div>
 
         <div class="field">
-          <label for="company_Hq">Please Upload Your resume</label>
+          <label for="profile_resume">Please Upload Your resume</label>
           <%= form.file_field :attachment %>
         </div>
         <!--<div class="field">-->

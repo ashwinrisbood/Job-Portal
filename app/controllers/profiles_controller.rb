@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to profiles_path, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to profiles_path }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
 
     if @profile.save
-      redirect_to profiles_path, notice: "The Profile #{@profile.name} has been uploaded."
+      redirect_to profiles_path
     else
       render "new"
     end
@@ -38,11 +38,11 @@ class ProfilesController < ApplicationController
   def destroy
     @profile = Profile.find(params[:id])
     @profile.destroy
-    redirect_to profiles_path, notice:  "The Profile #{@profile.name} has been deleted."
+    redirect_to profiles_path
   end
 
   private
   def profile_params
-    params.require(:profile).permit(:name, :no_of_workex_years, :current_company, :user_id, :attachment).merge(user: current_user)
+    params.require(:profile).permit(:no_of_workex_years, :current_company, :user_id, :attachment).merge(user: current_user). merge(name: current_user.name)
   end
 end

@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   # GET /companies
   # GET /companies.json
@@ -30,8 +30,11 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
-        format.json { render :show, status: :created, location: @company }
+        if not user_signed_in?
+          format.html { redirect_to signup_path, notice: 'Company was successfully created.' }
+        else
+          format.html { redirect_to @company, notice: 'Company was successfully created.' }
+        end
       else
         format.html { render :new }
         format.json { render json: @company.errors, status: :unprocessable_entity }

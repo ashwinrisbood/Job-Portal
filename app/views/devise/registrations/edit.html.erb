@@ -41,7 +41,8 @@
   </div>
 </div>
 <h3 style="font-style: italic;">Cancel my account</h3>
-
-<h5>Unhappy? </h5><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger btn-lg'  %>
+<% if not (current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s=='t')%>
+  <h5>Unhappy? </h5><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger btn-lg'  %>
+<% end %>
 <br>
 <%= link_to "Back", :back, class: 'btn btn-warning btn-lg' %>
