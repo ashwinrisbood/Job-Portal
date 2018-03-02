@@ -21,7 +21,10 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  <%= form_tag(request.env['PATH_INFO'], method: :get, :enforce_utf8 => false) do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search', name: nil%>
+  <% end %>
   <tbody>
     <% @jobs.each do |job| %>
     <div id="display_jobs" class="list-group-item-text">
