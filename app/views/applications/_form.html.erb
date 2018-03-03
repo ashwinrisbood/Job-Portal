@@ -40,12 +40,12 @@
 
   <div class="field">
     <%= form.label :gender %>
-    <%= form.text_field :gender, id: :application_gender, class: 'form-control' %>
+    <%= form.select :gender, ['Male', 'Female'] %>
   </div>
 
   <div class="field">
     <%= form.label :race %>
-    <%= form.text_field :race, id: :application_race, class: 'form-control' %>
+    <%= form.select :race, ['Asian', 'Hispanic or Latino', 'African American', 'Native American'] %>
   </div>
 
   <div class="field">
