@@ -43,6 +43,14 @@ gem 'bcrypt', '~> 3.1.7',:require => 'bcrypt'
 gem 'phantomjs', :require => 'phantomjs/poltergeist'
 gem 'attach'
 gem 'carrierwave'
+gem 'capybara', '~> 2.13'
+gem 'selenium-webdriver'
+gem 'rspec-rails', '~> 3.6'
+gem 'factory_girl_rails'
+gem 'rails-controller-testing'
+gem 'headless'
+gem 'poltergeist'
+gem 'database_cleaner'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -50,14 +58,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
-  gem 'rails-controller-testing'
-  gem 'headless'
-  gem 'poltergeist'
-  gem 'database_cleaner'
 end
 
 group :development do
