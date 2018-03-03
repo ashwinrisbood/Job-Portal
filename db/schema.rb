@@ -48,9 +48,11 @@ ActiveRecord::Schema.define(version: 20180302192248) do
     t.string "responsibilities"
     t.string "requirements"
     t.integer "company_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_jobs_on_company_id"
+    t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -62,13 +64,6 @@ ActiveRecord::Schema.define(version: 20180302192248) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
-  end
-
-  create_table "resumes", force: :cascade do |t|
-    t.string "name"
-    t.string "attachment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 # Could not dump table "users" because of following StandardError

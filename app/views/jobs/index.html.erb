@@ -36,8 +36,10 @@
         <td><%= job.responsibilities %></td>
         <td><%= job.requirements %></td>
         <td><%= job.company.name %></td>
-        <td><%= link_to 'Show', job , class: 'btn btn-primary btn-lg btn-block' %></td>
-        <% if ((current_user.isRecruiter.to_s=='True' or current_user.isRecruiter.to_s=='t') and current_user.companyname == job.company.name)%>
+        <% if job.user_id == current_user.id %>
+          <td><%= link_to 'Show', job , class: 'btn btn-primary btn-lg btn-block' %></td>
+        <% end %>
+          <% if ((current_user.isRecruiter.to_s=='True' or current_user.isRecruiter.to_s=='t') and current_user.companyname == job.company.name)%>
         <td><%= link_to 'Edit', edit_job_path(job), class: 'btn btn-warning btn-lg btn-block' %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg' %></td>
         <% elsif current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>

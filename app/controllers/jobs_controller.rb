@@ -70,6 +70,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:position ,:job_description, :employment_type, :responsibilities, :requirements).merge(company_id: current_user.company_id)
+      params.require(:job).permit(:position ,:job_description, :employment_type, :responsibilities, :requirements).merge(company_id: current_user.company_id).merge(user_id: current_user.id)
     end
 end

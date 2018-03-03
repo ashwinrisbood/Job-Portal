@@ -5,7 +5,13 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
-    @applications = Application.search(params)
+    if (current_user.id!=1)
+      #@applications = Application.where(user_id: current_user.id)
+      @applications = Application.search(params,current_user.id)
+    else
+      @applications = Application.all
+    end
+    #@applications = Application.search(params)
     #@job = Job.find(params[:job_id])
   end
 
