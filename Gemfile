@@ -40,7 +40,7 @@ gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 #
 gem 'bcrypt', '~> 3.1.7',:require => 'bcrypt'
-
+gem 'phantomjs', :require => 'phantomjs/poltergeist'
 gem 'attach'
 gem 'carrierwave'
 # Use Capistrano for deployment

@@ -4,9 +4,6 @@ require 'spec_helper'
 require 'capybara/poltergeist'
 require 'factory_girl_rails'
 require 'capybara/rspec'
-
-config.include Devise::Test::IntegrationHelpers, type: :feature
-config.include FactoryGirl::Syntax::Methods
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :puma
 ENV['RAILS_ENV'] ||= 'test'
@@ -38,6 +35,8 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include FactoryGirl::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

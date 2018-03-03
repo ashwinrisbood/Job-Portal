@@ -10,5 +10,11 @@
     <data-source name="Rails woodendoor: production" uuid="e2135c72-7bee-4385-b01d-337b26373e82">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
+    <data-source name="Rails woodendoor: test" uuid="764be6a4-d69b-4928-9eff-16fb7d3eea89">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
   </component>
 </project>
