@@ -2,7 +2,7 @@
 <div class="container">
   <div class="container container-fluid">
     <div class="col-sm-offset-9 col-sm-3 right">
-      <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s=='t'%>
+      <% if current_user.isAdmin?%>
         <%= link_to 'New User', new_user_registration_path, class: 'btn btn-info btn-lg btn-block' %>
       <% end %>
     </div>
@@ -29,7 +29,7 @@
         <td><%= u.name %></td>
         <td><%= u.email %></td>
         <td><%= u.created_at %></td>
-        <% if u.isRecruiter.to_s=='t' or u.isRecruiter.to_s=='True' or u.isRecruiter.to_s=='true'%>
+        <% if u.isRecruiter?%>
         <td><span class="fui-check" style="margin-left: 30%"></span></td>
         <td><%= Company.find(u.company_id.to_f).name %></td>
           <% else %>

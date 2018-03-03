@@ -2,7 +2,7 @@
 <div class="container">
   <div class="container container-fluid">
     <div class="col-sm-offset-9 col-sm-3 right">
-      <% if current_user.isAdmin == 'True' or current_user.isAdmin.to_s=='t'%>
+      <% if current_user.isAdmin?%>
       <%= link_to 'New Company', new_company_path, class: 'btn btn-info btn-lg btn-block' %>
       <% end %>
     </div>
@@ -40,7 +40,7 @@
         <td><%= company.revenue %></td>
         <td><%= company.synopsis %></td>
         <td><%= link_to 'Show', company , class: 'btn btn-primary btn-lg btn-block'%></td>
-        <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
+        <% if current_user.isAdmin?%>
         <td><%= link_to 'Edit', edit_company_path(company), class: 'btn btn-warning btn-lg btn-block' %></td>
         <td><%= link_to 'Delete', company, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg btn-block' %></td>
         <% end %>

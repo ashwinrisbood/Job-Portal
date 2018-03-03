@@ -1,8 +1,11 @@
 <h1>Jobs</h1>
 <div class="container">
+  <% if not Profile.exists?(user_id: current_user.id) %>
+    <h5>Please update profile section before you can apply.</h5>
+  <% end %>
   <div class="container container-fluid">
     <div class="col-sm-offset-9 col-sm-3 right">
-      <% if current_user.isRecruiter.to_s=='True' or current_user.isRecruiter.to_s=='t'%>
+      <% if current_user.isRecruiter? or current_user.isRecruiter?%>
       <%= link_to 'New Job', new_job_path, class: 'btn btn-info btn-lg btn-block' %>
       <% end %>
     </div>
@@ -39,12 +42,12 @@
         <% if job.user_id == current_user.id %>
           <td><%= link_to 'Show', job , class: 'btn btn-primary btn-lg btn-block' %></td>
         <% end %>
-          <% if ((current_user.isRecruiter.to_s=='True' or current_user.isRecruiter.to_s=='t') and current_user.companyname == job.company.name)%>
+          <% if current_user.isRecruiter? and current_user.companyname == job.company.name%>
         <td><%= link_to 'Edit', edit_job_path(job), class: 'btn btn-warning btn-lg btn-block' %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg' %></td>
-        <% elsif current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
+        <% elsif current_user.isAdmin? or current_user.isAdmin?%>
           <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg btn-block' %></td>
-        <% else %>
+        <% elsif Profile.exists?(user_id: current_user.id) %>
           <td><%= link_to 'Apply', new_application_path(job_id: job.id), class: 'btn btn-warning btn-lg btn-block' %></td>
         <% end %>
       </tr>

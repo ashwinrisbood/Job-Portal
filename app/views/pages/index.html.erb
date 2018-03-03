@@ -1,4 +1,4 @@
-<div class="container" style="background-image: url('/assets/MidtownSunset_460.gif'); height: 650px ; background-size: 100%">
+<div class="container" style="background-image: url('/assets/NY.gif'); height: 650px ; background-size: 100%; width: 1500px; margin-left: -170px">
   <div class="row">
     <div id="side-menu"  class="col-sm-3">
     </div><!-- side-menu -->
@@ -8,7 +8,11 @@
         <div class="container container-fluid">
 
           <h3>Welcome to Woodendoor</h3>
-          <h5>Use the navigation bar</h5>
+          <% if not current_user %>
+          <h5>Please Log In</h5>
+            <% else %>
+            <h5>Navigate to Succeed!!</h5>
+            <% end %>
         </div>
       </div>
     </div><!-- main-content -->

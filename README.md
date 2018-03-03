@@ -23,3 +23,6 @@ Seekers:
  - Tested user model, registrations controller and navigations controller. 
  
  Use login to signup after an account is created. You can use the default login credentials given above or you can create a new user using the signup tab in the top right.
+ 
+ Things to NOTE:
+ 1. Job Seeker cannot apply to a job without creating a profile. 

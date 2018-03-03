@@ -34,7 +34,7 @@
   <strong>Company:</strong>
   <%= @job.company.name %>
 </p>
-        <% if (current_user.isRecruiter=='True' or current_user.isRecruiter==true) and current_user.companyname == @job.company.name%>
+        <% if current_user.isRecruiter? and current_user.companyname == @job.company.name%>
 <%= link_to 'Edit', edit_job_path(@job), class: 'btn btn-primary btn-lg' %>
         <% end %>
 <%= link_to 'Back', jobs_path, class: 'btn btn-warning btn-lg'  %>
