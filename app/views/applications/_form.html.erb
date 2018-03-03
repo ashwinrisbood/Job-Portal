@@ -4,7 +4,7 @@
 
     <div class="col-sm-offset-4 col-sm-4">
 
-      <h2> JOb ID: <%= @job.id %> </h2>
+      <h5> Job ID: <%= @job.id %> </h5>
 <%= bootstrap_form_for(@application) do |form| %>
   <% if application.errors.any? %>
     <div id="error_explanation">
@@ -59,7 +59,6 @@
   <!--</div>-->
 
   <div class="field">
-    <%= form.label :job_id %>
     <%= form.hidden_field :job_id, value: params[:job_id]%>
         </div>
 
