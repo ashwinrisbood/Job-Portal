@@ -72,9 +72,8 @@ Rails.application.configure do
       domain: 'gmail.com',
       authentication: "plain",
       enable_starttls_auto: true,
-      user_name: "pranssin@gmail.com",
-      password: "codwarfare"
-
+      user_name: "railsprog2@gmail.com",
+      password: "hellohellorails"
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
