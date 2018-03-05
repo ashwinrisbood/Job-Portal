@@ -22,7 +22,7 @@
   <%= link_to 'Companies', companies_path %>
   <%= link_to 'Jobs', companies_path %>
 <%= link_to 'Your Applications', applications_path%>
-  <% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s == 't'%>
+  <% if current_user.isAdmin?%>
     <%= link_to 'Users', users_path%>
   <% end %>
   <%= link_to 'Edit Account', edit_user_registration_path %>

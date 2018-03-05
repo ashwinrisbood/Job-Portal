@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20180302192248) do
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "website"
-    t.string "Hq"
+    t.string "hq"
     t.integer "size"
     t.string "Founded"
     t.string "industry"

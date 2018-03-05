@@ -4,7 +4,7 @@ class Company < ApplicationRecord
     results = Company.all
     results = results.where(company_id: params[:company_id]) if params[:company_id].present?
     if params[:search].present?
-      results = results.where('companies.name LIKE :search OR companies.industry LIKE :search OR companies.Hq LIke :search',search: "%#{params[:search]}%")
+      results = results.where('LOWER(companies.name) LIKE :search OR LOWER(companies.industry) LIKE :search OR LOWER(companies.hq) LIKE :search',search: "%#{params[:search]}%")
     end
     results
   end
