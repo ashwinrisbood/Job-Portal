@@ -44,5 +44,5 @@ Seekers:
  ## <b> Job poster's/Recruiter's Tasks to note:- </b>
  
 1. The recruiter should be part of a company to post a job. Also the company is non existant then while creating a profile you will be redirected to new company page in which you create the company first. After this you can choose this company from the drop down to select it as your company in your signup page.
-2. Recruiter is ONLY ALLOWED to Read applications/ update status for the jobs in his/her company.
-3. Recruiter is NOT ALLOWED to Create/Update/Delete jobs posted by other Recruiters.
+2. Recruiter is only allowed to Read applications/ update status for the jobs in his/her company.
+3. Recruiter is not allowed to Create/Update/Delete jobs posted by other Recruiters.
