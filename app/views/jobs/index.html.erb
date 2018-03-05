@@ -5,7 +5,7 @@
   <% end %>
   <div class="container container-fluid">
     <div class="col-sm-offset-9 col-sm-3 right">
-      <% if current_user.isRecruiter? or current_user.isRecruiter?%>
+      <% if current_user.isRecruiter? or current_user.isAdmin?%>
       <%= link_to 'New Job', new_job_path, class: 'btn btn-info btn-lg btn-block' %>
       <% end %>
     </div>

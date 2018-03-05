@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /companies
   # GET /companies.json
@@ -16,7 +16,18 @@ class CompaniesController < ApplicationController
 
   # GET /companies/new
   def new
+    unless !user_signed_in? or current_user.isAdmin?
+      flash[:notice] = "Only admins can do that"
+      redirect_to root_path
+    end
     @company = Company.new
+  end
+
+  def redirect_unless_admin
+    unless !user_signed_in? or current_user.isAdmin?
+      flash[:error] = "Only admins can do that"
+      redirect_to root_path
+    end
   end
 
   # GET /companies/1/edit

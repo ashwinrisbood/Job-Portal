@@ -15,6 +15,10 @@ class JobsController < ApplicationController
 
   # GET /jobs/new
   def new
+    unless !user_signed_in? or current_user.isAdmin? or current_user.isRecruiter?
+      flash[:notice] = "Only admins can do that"
+      redirect_to root_path
+    end
     @job = Job.new
   end
 
@@ -25,6 +29,7 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
+
     @job = Job.new(job_params)
 
     respond_to do |format|
