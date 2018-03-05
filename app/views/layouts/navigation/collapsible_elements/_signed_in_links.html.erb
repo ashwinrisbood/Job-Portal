@@ -2,7 +2,7 @@
 <li><%= link_to 'Companies', companies_path , class: 'pc-menu'%></li>
 <li><%= link_to 'Jobs', jobs_path , class: 'pc-menu'%></li>
 <li><%= link_to 'Your Applications', applications_path , class: 'pc-menu'%></li>
-<% if current_user.isAdmin.to_s == 'True' or current_user.isAdmin.to_s=='t'%>
+<% if current_user.isAdmin?%>
   <li><%= link_to 'Users', users_path, class: 'pc-menu'%></li>
 <% end %>
 <li class="dropdown pc-menu">
