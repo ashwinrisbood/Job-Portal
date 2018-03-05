@@ -51,6 +51,7 @@ gem 'rails-controller-testing'
 gem 'headless'
 gem 'poltergeist'
 gem 'database_cleaner'
+gem 'dotenv'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

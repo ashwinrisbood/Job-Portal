@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
   include Devise::Controllers::Helpers
   before_action :authenticate_user!
+  before_action :redirect_unless_admin
+
+  def redirect_unless_admin
+    unless !user_signed_in? or current_user.isAdmin?
+      flash[:notice] = "Only admins can do that"
+      redirect_to root_path
+    end
+  end
 
   def index
     @users = User.all
