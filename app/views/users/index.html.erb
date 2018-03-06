@@ -23,7 +23,7 @@
 
   <tbody>
   <% @users.each do |u| %>
-  <% if not (u.isAdmin.to_s == 'True' or u.isAdmin.to_s=='t') %>
+  <% if not u.isAdmin? %>
     <div id="display_users" class="list-group-item-text">
       <tr>
         <td><%= u.name %></td>

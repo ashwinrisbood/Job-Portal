@@ -22,6 +22,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if current_user == @user
       redirect_to users_path, notice: "You can't destroy yourself."
+    elsif @user.id == 1
+      redirect_to users_path, notice: "Admin Cannot be Deleted"
     else
       @user.destroy
       flash[:success] = "User destroyed."
