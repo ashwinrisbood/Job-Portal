@@ -31,7 +31,7 @@
         <td><%= u.created_at %></td>
         <% if u.isRecruiter?%>
         <td><span class="fui-check" style="margin-left: 30%"></span></td>
-        <td><%= Company.find(u.company_id.to_f).name %></td>
+        <td><%= Company.find(u.company_id).name %></td>
           <% else %>
           <td><span class="fui-cross" style="margin-left: 30%"></span></td>
           <td><%= u.companyname %></td>
