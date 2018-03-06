@@ -20,6 +20,19 @@ class ApplicationsController < ApplicationController
   def show
   end
 
+  def status
+    Job.where(id: params[:job_id]).update(isClosed: true)
+    Application.where(job_id: params[:job_id]).update_all(status: 'No Longer In Consideration')
+    Application.where(job_id: params[:job_id], user_id: params[:user_id]).update(status: 'Selected')
+    ApplicationsMailer.congratulations(User.find(params[:user_id]), Job.find(params[:job_id])).deliver
+    Application.where(job_id: params[:job_id]).each do |applications|
+      if applications.user_id!=params[:user_id]
+        ApplicationsMailer.no_consideration(User.find(applications.user_id), Job.find(params[:job_id])).deliver
+      end
+    end
+    redirect_to job_path
+  end
+
   # GET /applications/new
   def new
     @application = Application.new
@@ -34,6 +47,7 @@ class ApplicationsController < ApplicationController
   # POST /applications.json
   def create
     @application = Application.new(application_params)
+    if not Application.exists?(job_id: application_params[:job_id], user_id: current_user.id)
     respond_to do |format|
       if @application.save
         format.html { redirect_to @application, notice: 'Application was successfully created.' }
@@ -43,6 +57,9 @@ class ApplicationsController < ApplicationController
         format.json { render json: @application.errors, status: :unprocessable_entity }
       end
     end
+    else
+      redirect_to applications_path, notice: 'You Cannot Apply to the same Job Twice'
+      end
   end
 
   # PATCH/PUT /applications/1

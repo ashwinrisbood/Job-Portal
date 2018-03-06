@@ -1,0 +1,11 @@
+Hi <%= @user.name %>
+
+You are no longer in consideration for the Job ID:<%= @job.id %> for the position <%= @job.position %> at <%= Company.find(@job.company_id).name %>
+
+We appreciate your interest in <%= Company.find(@job.company_id).name %> and wish you the best of luck in your future endeavors.
+
+
+Regards
+
+
+<%= Company.find(@job.company_id).name %> Recruiting team

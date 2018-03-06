@@ -25,6 +25,12 @@
     <%= form.label :job_description %>
     <%= form.text_field :job_description, id: :job_job_description %>
   </div>
+        <% if current_user.isAdmin? %>
+          <div class="field">
+            <%= form.label :company_id %>
+          <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.name, c.id]}), selected_key: [form.object.company, form.object.company_id]%>
+          </div>
+          <% end %>
 
   <div class="field">
     <%= form.label :employment_type %>
@@ -40,6 +46,7 @@
     <%= form.label :requirements %>
     <%= form.text_field :requirements, id: :job_requirements %>
   </div>
+        <%= form.hidden_field :isClosed, value: false%>
 
   <div class="actions">
     <%= form.submit 'Create Job', class: 'btn btn-primary btn-lg btn-block' %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :applications
+  match 'applications/:id/status', to: 'applications#status', via: 'get', as: :applications_status
   match '/users', to: 'users#index', via: 'get'
   resources :jobs
   resources :companies do

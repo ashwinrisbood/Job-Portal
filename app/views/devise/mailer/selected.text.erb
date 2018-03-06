@@ -1,0 +1,12 @@
+Hi <%= @user.name %>
+
+First of All, CONGRATULATIONS!
+
+After going through all the applicants for the Job ID:<%= @job.id %> and position <%= @job.position %> at <%= Company.find(@job.company_id).name %>, We have decided to proceed with you for Interview Rounds.
+
+Please reply to this mail with your availability for the interviews in the coming weeks
+
+
+Regards
+
+<%= Company.find(@job.company_id).name %> Recruiting team

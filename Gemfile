@@ -52,6 +52,7 @@ gem 'headless'
 gem 'poltergeist'
 gem 'database_cleaner'
 gem 'dotenv'
+gem 'figaro'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

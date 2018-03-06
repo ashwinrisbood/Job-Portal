@@ -1,7 +1,4 @@
-class ApplicationMailer < ActionMailer::Base
-  default from: 'railsprog2@gmail.com'
-  layout 'mailer'
-
+class ApplicationsMailer < ApplicationMailer
   def no_consideration(user, job)
     @job = job
     @user = user

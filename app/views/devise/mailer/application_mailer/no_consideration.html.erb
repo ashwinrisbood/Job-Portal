@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Hi <%= @user.name %></h1>
+<p>
+  You are no longer in consideration for the Job ID:<%= @job.id %> for the position <%= @job.position %> at <%= Company.find(@job.company_id).name %>
+</p>
+<p>
+  We appreciate your interest in <%= Company.find(@job.company_id).name %> and wish you the best of luck in your future endeavors.
+</p>
+<p>
+  Regards
+  <%= Company.find(@job.company_id).name %> Recruiting team
+</p>
+</body>
+</html>
