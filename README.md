@@ -46,3 +46,5 @@ Seekers:
 1. The recruiter should be part of a company to post a job. Also the company is non existant then while creating a profile you will be redirected to new company page in which you create the company first. After this you can choose this company from the drop down to select it as your company in your signup page.
 2. Recruiter is only allowed to Read applications/ update status for the jobs in his/her company.
 3. Recruiter is not allowed to Create/Update/Delete jobs posted by other Recruiters.
+4. Recruiter can select a candidate for a job he/she posted by clicking on the select button next to the applicant in the applications      tab.
+5. After a candidate is selected he/she will <b>recieve an email</b> in the registered e-mail address and the candidates who are not selected      recieve a rejection in their inbox.

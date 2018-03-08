@@ -34,7 +34,7 @@
           <%else%>
           <td><span class="fui-cross" style="margin-left: 30%"></span></td>
           <% end %>
-          <% if u.isRecruiter? and u.company_id!=nil%>
+          <% if u.isRecruiter? and u.company_id!=nil and Company.exists?(u.company_id)%>
         <td><%= Company.find(u.company_id).name %></td>
           <% else %>
           <td><%= u.companyname %></td>
