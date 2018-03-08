@@ -70,6 +70,10 @@ class CompaniesController < ApplicationController
   # DELETE /companies/1
   # DELETE /companies/1.json
   def destroy
+    if User.find_by_company_id(@company.id)
+      User.find_by_company_id(@company.id).update(company_id: nil)
+      User.find_by_company_id(@company.id).update(isRecruiter: false)
+    end
     @company.destroy
     respond_to do |format|
       format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }

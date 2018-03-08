@@ -31,9 +31,12 @@
         <td><%= u.created_at %></td>
         <% if u.isRecruiter?%>
         <td><span class="fui-check" style="margin-left: 30%"></span></td>
+          <%else%>
+          <td><span class="fui-cross" style="margin-left: 30%"></span></td>
+          <% end %>
+          <% if u.isRecruiter? and u.company_id!=nil%>
         <td><%= Company.find(u.company_id).name %></td>
           <% else %>
-          <td><span class="fui-cross" style="margin-left: 30%"></span></td>
           <td><%= u.companyname %></td>
           <% end %>
         <td><%= link_to 'Delete', u , controller: 'users', :method => :delete, :confirm => "You sure?",class: 'btn btn-danger btn-lg btn-block'%></td>

@@ -40,8 +40,10 @@
         <td><%= company.revenue %></td>
         <td><%= company.synopsis %></td>
         <td><%= link_to 'Show', company , class: 'btn btn-primary btn-lg btn-block'%></td>
-        <% if current_user.isAdmin?%>
+        <% if current_user.isAdmin? or current_user.company_id == company.id%>
         <td><%= link_to 'Edit', edit_company_path(company), class: 'btn btn-warning btn-lg btn-block' %></td>
+        <% end %>
+        <% if current_user.isAdmin?%>
         <td><%= link_to 'Delete', company, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg btn-block' %></td>
         <% end %>
       </tr>

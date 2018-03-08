@@ -14,12 +14,12 @@
                      placeholder: 'Username (will be shown publicly)',
                      class: 'form-control' %>
         <strong>Is this a Recruiter Account?</strong>
-        <%= f.check_box :isRecruiter?, {},true, false %>
+        <%= f.check_box :isRecruiter?, {},true, false%>
         <div id="company_details" style="display:none;">
           <strong>If your company is not present you can create it using the link</strong>
           <%= link_to 'New Company', new_company_path, class: 'btn btn-info btn-lg btn-block' %>
           <br>
-          <%= f.select :company_id, options_for_select(Company.all.map{ |c| [c.name, c.id]}), selected_key: [f.object.companyname, f.object.company_id]%>
+          <%= f.select :company_id, options_for_select(Company.all.map{ |c| [c.name, c.id]}), selected_key: [f.object.companyname, f.object.company_id], :include_blank => true%>
         </div>
         <br/>
         <%= f.text_field :email,
