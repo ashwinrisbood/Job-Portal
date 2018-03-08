@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8e4d45ad-37e6-4903-8f78-60e91ea8f27a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -84,8 +85,8 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            <state relative-caret-position="279">
+              <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -181,9 +182,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20180308053420_changedefault.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/companies_controller.rb" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -257,14 +258,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="devise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="woodendoor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="woodendoor" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-              <item name="registrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,12 +421,12 @@
       <workItem from="1520220835998" duration="1110000" />
       <workItem from="1520267468059" duration="1302000" />
       <workItem from="1520269874869" duration="23172000" />
-      <workItem from="1520542999680" duration="429000" />
+      <workItem from="1520542999680" duration="1752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111758000" />
+    <option name="totallyTimeSpent" value="113081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,20 +473,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/mailer/application_mailer/selected.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/navigation/no_consideration.html.erb" />
     <entry file="das://table:/1920f153/94ec7d48-7c9d-4419-9d44-d12561773aad/main.applications">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -708,14 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -741,6 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-109">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,17 +731,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180308053420_changedefault.rb" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -784,16 +750,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="368">
-            <caret line="49" column="182" lean-forward="false" selection-start-line="49" selection-start-column="182" selection-end-line="49" selection-end-column="182" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -821,10 +777,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/factories/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="630">
+            <caret line="42" column="105" lean-forward="true" selection-start-line="42" selection-start-column="105" selection-end-line="42" selection-end-column="105" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding />
         </state>
       </provider>

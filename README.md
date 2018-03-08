@@ -20,8 +20,9 @@ Seekers:
 3. Account: psinha@ncsu.edu
       Password: psinha
       
- - Tested user model, registrations controller and navigations controller. 
- 
+ <b>Tested user model, registrations controller.</b>
+ <b>FIND THESE TESTS IN SPEC FOLDER</b> 
+ <b><I>EMAIL function is working if you use any E-MAIL address except the ncsu e-mail address(ncsu e-mail reports such mails as phishing mails)<I><b>
  Use login to signup after an account is created. You can use the default login credentials given above or you can create a new user using the signup tab in the top right.
  
  ## <b>Admin's Tasks to note:- </b>
@@ -40,8 +41,10 @@ Seekers:
  3. Job Seeker is only allowed to read the company info.
  4. He can look up all the lists of jobs posted in the website and can search for keywords of a job in the search bar.
  5. Job seeker can submit applications for a job by clicking on the apply button next to the job posting.
- 
- ## <b> Job poster's/Recruiter's Tasks to note:- </b>
+ 6. The resume for your application is pulled from your profile, so that you don't have to attach your resume multiple times while 
+    applying. If you edit your resume in the profile, it gets updated in all your past applications.
+    
+## <b> Job poster's/Recruiter's Tasks to note:- </b>
  
 1. The recruiter should be part of a company to post a job. Also the company is non existant then while creating a profile you will be redirected to new company page in which you create the company first. After this you can choose this company from the drop down to select it as your company in your signup page.
 2. Recruiter is only allowed to Read applications/ update status for the jobs in his/her company.
