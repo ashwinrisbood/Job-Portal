@@ -13,7 +13,7 @@
 
         <div class="field">
           <%= f.label :name %><br />
-          <%= f.email_field :name, autofocus: true, autocomplete: "Name"%>
+          <%= f.text_field :name, autofocus: true, autocomplete: "Name"%>
         </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
